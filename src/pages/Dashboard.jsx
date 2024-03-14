@@ -2,7 +2,7 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div>
+    <div className='flex justify-center items-center '>
         Welcome to StudyNotion
     </div>
   )
