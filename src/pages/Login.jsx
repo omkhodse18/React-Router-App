@@ -1,17 +1,11 @@
-import Template from "../components/Auth/Template";
-import loginImg from "../assets/login.png";
+import React from 'react'
 
-function Login({ setIsLoggedIn }) {
+function Login() {
   return (
-    <Template
-      title="Welcome Back"
-      description1="Build skills for today, tomorrow, and beyond."
-      description2="Education to future-proof your career."
-      image={loginImg}
-      formType="login"
-      setIsLoggedIn={setIsLoggedIn}
-    />
-  );
+    <div>
+      
+    </div>
+  )
 }
 
-export default Login;
+export default Login
