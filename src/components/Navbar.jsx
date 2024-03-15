@@ -27,10 +27,6 @@ function Navbar(props) {
                 <li>
                     <Link to="#">Contact</Link>
                 </li>
-                
-                {/* <li>
-                    <Link to="/">Home</Link>
-                </li> */}
 
             </ul>
         </nav>
