@@ -57,7 +57,7 @@ function SignupForm({setIsLoggedIn}) {
         {/* first and last name  */}
         <div className='flex gap-x-4 mt-[20px]'>
           <label className='w-full'>
-            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>First Name<sup>*</sup></p>
+            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>First Name<sup className='text-pink-200'>*</sup></p>
             
             <input
               required
@@ -71,7 +71,7 @@ function SignupForm({setIsLoggedIn}) {
           </label>
 
           <label className='w-full'>
-            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Last Name<sup>*</sup></p>
+            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Last Name<sup className='text-pink-200'>*</sup></p>
 
             <input
               required
@@ -88,7 +88,7 @@ function SignupForm({setIsLoggedIn}) {
         {/* Email Address field  */}
         <div className='mt-[20px]'>
           <label className='w-full mt-[20px]'>
-              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Email Address<sup>*</sup></p>
+              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Email Address<sup className='text-pink-200'>*</sup></p>
 
               <input
                 required
@@ -105,7 +105,7 @@ function SignupForm({setIsLoggedIn}) {
         {/* create and confirm password */}
         <div className='w-full flex gap-x-4 mt-[20px]'>
           <label className='w-full relative'>
-              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Create Password<sup>*</sup></p>
+              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Create Password<sup className='text-pink-200'>*</sup></p>
 
               <input
                 required
@@ -129,7 +129,7 @@ function SignupForm({setIsLoggedIn}) {
           </label>
 
           <label className='w-full relative'>
-              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Confirm Password<sup>*</sup></p>
+              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Confirm Password<sup className='text-pink-200'>*</sup></p>
 
               <input
                 required
