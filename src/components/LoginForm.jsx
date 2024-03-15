@@ -1,26 +1,37 @@
 import React, { useState } from 'react'
 import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai"
 import { Link } from 'react-router-dom';
+import {toast} from "react-hot-toast"
+import {useNavigate} from "react-router-dom"
 
-function LoginForm() {
+function LoginForm({setIsLoggedIn}) {
 
   const [formData, setFormData] = useState({email:"",password:""});
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
 
   function changeHandler(event){
-    const {name, value} = event.target;
+    // const {name, value} = event.target;
 
       setFormData( (prev) => (
         {...prev, 
-          [name]:value
+          [event.target.name]:event.target.value
         }
         ) )
+  }
+
+  function submitHandler(event){
+    event.preventDefault();
+    setIsLoggedIn(true);
+    toast.success("Logged In");
+    navigate("/dashboard");
   }
 
   return (
     <div>
       
-      <form>
+      <form onSubmit={submitHandler}>
 
         <label>
           <p>
@@ -52,7 +63,7 @@ function LoginForm() {
             placeholder='Enter Password'
           />
 
-          <span onClick={setShowPassword((prev) => !prev)}>
+          <span onClick={()=>setShowPassword((prev) => !prev)}>
             {
               (showPassword) ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)
             }
