@@ -42,7 +42,7 @@ function SignupForm({setIsLoggedIn}) {
     <div>
         
       {/* student Instructor Tab  */}
-      <div>
+      <div className='flex bg-richblack-800 p-1 gap-x-1 my-6 rounded-full max-w-max'>
         <button>
           Student
         </button>
@@ -55,9 +55,9 @@ function SignupForm({setIsLoggedIn}) {
       <form onSubmit={submitHandler}>
         
         {/* first and last name  */}
-        <div>
-          <label>
-            <p>First Name<sup>*</sup></p>
+        <div className='flex gap-x-4 mt-[20px]'>
+          <label className='w-full'>
+            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>First Name<sup>*</sup></p>
             
             <input
               required
@@ -66,11 +66,12 @@ function SignupForm({setIsLoggedIn}) {
               placeholder='John'
               value={formData.firstName}
               onChange={changeHandler}
+              className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
             />
           </label>
 
-          <label>
-            <p>Last Name<sup>*</sup></p>
+          <label className='w-full'>
+            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Last Name<sup>*</sup></p>
 
             <input
               required
@@ -79,28 +80,32 @@ function SignupForm({setIsLoggedIn}) {
               placeholder='Doe'
               value={formData.lastName}
               onChange={changeHandler}
+              className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
             />
           </label>
         </div>
         
         {/* Email Address field  */}
-        <label>
-            <p>Email Address<sup>*</sup></p>
+        <div className='mt-[20px]'>
+          <label className='w-full mt-[20px]'>
+              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Email Address<sup>*</sup></p>
 
-            <input
-              required
-              type='email'
-              name='email'
-              placeholder='johndoe@gmail.com'
-              value={formData.email}
-              onChange={changeHandler}
-            />
-        </label>
+              <input
+                required
+                type='email'
+                name='email'
+                placeholder='johndoe@gmail.com'
+                value={formData.email}
+                onChange={changeHandler}
+                className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
+              />
+          </label>
+        </div>
 
         {/* create and confirm password */}
-        <div>
-          <label>
-              <p>Create Password<sup>*</sup></p>
+        <div className='w-full flex gap-x-4 mt-[20px]'>
+          <label className='w-full relative'>
+              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Create Password<sup>*</sup></p>
 
               <input
                 required
@@ -109,18 +114,22 @@ function SignupForm({setIsLoggedIn}) {
                 placeholder='Enter password'
                 value={formData.password}
                 onChange={changeHandler}
+                className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
               />
 
-              <span onClick={() => setShowPassword((prev) => !prev)}>
+              <span 
+              className='absolute right-3 top-[38px] cursor-pointer' 
+              onClick={() => setShowPassword((prev) => !prev)}>
               {
-                (showPassword) ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)
+                (showPassword) ? (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/> ) 
+                                : (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)
               }
              </span>
 
           </label>
 
-          <label>
-              <p>Confirm Password<sup>*</sup></p>
+          <label className='w-full relative'>
+              <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Confirm Password<sup>*</sup></p>
 
               <input
                 required
@@ -129,18 +138,22 @@ function SignupForm({setIsLoggedIn}) {
                 placeholder='Confirm password'
                 value={formData.confirmPassword}
                 onChange={changeHandler}
+                className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
               />
 
-              <span onClick={()=>setShowPassword((prev) => !prev)}>
+              <span 
+              className='absolute right-3 top-[38px] cursor-pointer'
+              onClick={()=>setShowPassword((prev) => !prev)}>
               {
-                (showPassword) ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)
+                (showPassword) ? (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>) 
+                                : (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)
               }
              </span>
 
           </label>
         </div>
 
-        <button>
+        <button className=' w-full bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-6'>
           Create Account
         </button>
       </form>
